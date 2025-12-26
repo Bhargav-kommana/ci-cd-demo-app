@@ -1,4 +1,4 @@
-name: My First GitHub Action
+name: Build Docker Image
 
 on:
   push:
@@ -6,9 +6,12 @@ on:
       - main
 
 jobs:
-  demo-job:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Print message
-        run: echo "Hello Bhargav! GitHub Actions is working 🚀"
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      - name: Build Docker image
+        run: docker build -t my-flask-app .
