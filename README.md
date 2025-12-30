@@ -1,1 +1,1 @@
-# ci-cd-demo-app
+CI/CD in Action: GitHub → Docker → AWS ECS
